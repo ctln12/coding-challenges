@@ -6,8 +6,14 @@ Solve coding challenges with other developers to grow skills. Each one can share
 
 ## Challenge list
 
-1. String Manipulation (2 challenges)
+1. String Manipulation (2 JS challenges)
+2. Order summary component (1 frontend challenge)
 
 ## Credit
 
 Project initiated by [Felipe Barcon](https://github.com/Felipebarcon)
+
+## Resources
+
+- Challenges are taken from [Codepend](https://codepen.io/challenges), [Codewars](https://www.codewars.com/) and others
+- Frontend challenges are taken from [Frontend Mentor](https://www.frontendmentor.io/)
