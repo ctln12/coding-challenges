@@ -19,16 +19,3 @@ Your task is to write a function maskify, which changes all but the last four ch
 -->
 "####################################man!"
 */
-
-function maskify (number) {
-  if (number.length <= 4) return number;
-
-  hiddenNumbers = number.slice(0, number.length - 4).replaceAll(/\d/g, '#');
-  lastNumbers = number.slice(number.length - 4, number.length);
-  return hiddenNumbers + lastNumbers;
-}
-
-console.log(maskify("4556364607935616") === "############5616");
-console.log(maskify("64607935616") === "#######5616");
-console.log(maskify("1") === "1");
-console.log(maskify("") === "");

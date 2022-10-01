@@ -10,21 +10,3 @@ Write a function that receives the string flights as argument and transform it t
   🔴 Delayed Arrival from HEL to FAO (12h05)
            Departure from FAO to LIS (12h30)
 */
-
-function displayFlights (text) {
-  const cityArray = [...text.matchAll(/([a-z]{3})\d+/g)];
-  cityArray.forEach(city => text = text.replace(city[0], city[1].toUpperCase()));
-
-  const timeArray = [...text.matchAll(/\d{2}:\d{2}/g)];
-  timeArray.forEach(time => text = text.replace(time[0], `(${time[0]})`));
-
-  return text.split('+').map(s => { return s.startsWith('_Delayed') ? `\uD83D\uDD34${s}`.padStart(38) : `${s.padStart(38)}` })
-                        .map(s => s.replace(';', ' from '))
-                        .map(s => s.replace(';', ' to '))
-                        .map(s => s.replace(';', ' '))
-                        .map(s => s.replace(':', 'h'))
-                        .map(s => s.replaceAll('_', ' '))
-                        .join('\n');
-}
-
-console.log(displayFlights(flights));
